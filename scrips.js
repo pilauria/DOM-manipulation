@@ -1,17 +1,17 @@
 // EXAMINE THE DOM
-// console.dir(document);
-console.log(document.domain);
-console.log(document.URL);
-console.log(document.title);
-//documet.title = 123
-console.log(document.doctype);
-console.log(document.head);
-console.log(document.body);
-console.log(document.all);
-console.log(document.all[10]);
-console.log(document.forms[0]); //select the first form of the document
-console.log(document.links);
-console.log(document.images);
+// // console.dir(document);
+// console.log(document.domain);
+// console.log(document.URL);
+// console.log(document.title);
+// //documet.title = 123
+// console.log(document.doctype);
+// console.log(document.head);
+// console.log(document.body);
+// console.log(document.all);
+// console.log(document.all[10]);
+// console.log(document.forms[0]); //select the first form of the document
+// console.log(document.links);
+// console.log(document.images);
 
 // Selecting elements and using methods to change them //
 // getElementById
@@ -28,7 +28,7 @@ console.log(document.images);
 // headerTitle.innerHTML = '<h3>Hello</h3>'; // the h3 is now inside the h1 (innerHTML put the selected element inside the parent element)
 // header.style.borderBottom = 'solid 3px #000';
 
-//  GETELEMENTSBYCLASSNAME //
+// // GETELEMENTSBYCLASSNAME //
 // var items = document.getElementsByClassName('list-group-item');
 // console.log(items);
 // console.log(items[1]);
@@ -40,19 +40,19 @@ console.log(document.images);
 //   items[i].style.backgroundColor = '#f4f4f4';
 // }
 
-// GETELEMENTBYTAGNAME //
+// // GETELEMENTBYTAGNAME //
 // var li = document.getElementsByTagName('li');
 // console.log(li);
 // console.log(li[1]);
 // li[1].textContent = 'Hello 2';
 // li[1].style.fontWeight = 'bold';
 // li[1].style.backgroundColor = 'yellow';
-// //give all the items the same background color
+// // give all the items the same background color
 // for (let i = 0; i < li.length; i++) {
 //   li[i].style.backgroundColor = '#f4f4f4';
 // }
 
-// QUERYSELECTOR //
+// // QUERYSELECTOR //
 // let header = document.querySelector('#main-header');
 // header.style.borderBottom = 'solid 5px #ccc';
 
@@ -69,13 +69,14 @@ console.log(document.images);
 // lastItem.style.color = 'blue';
 
 // let secondItem = document.querySelector('.list-group-item:nth-child(2)');
-// secondItem.style.color = 'coral';
+// secondItem.style.color = 'green';
+// secondItem.style.fontSize = '26px';
 
-//  QUERYSELECTORALL //
+// //  QUERYSELECTORALL //
 // var titles = document.querySelectorAll('.title');
 
 // console.log(titles);
-// titles[0].textContent = 'Hello';
+// titles[0].textContent = 'Hellos';
 
 // let odd = document.querySelectorAll('li:nth-child(odd)');
 // let even = document.querySelectorAll('li:nth-child(even)');
@@ -84,22 +85,21 @@ console.log(document.images);
 //   odd[i].style.backgroundColor = '#f4f4f4';
 //   even[i].style.backgroundColor = '#ccc';
 // }
-//
 
-// TRAVERSYNG THE DOM (query parents/children/siblings..) //
-let itemList = document.querySelector('#items');
-// parentNode
+// //  TRAVERSYNG THE DOM (query parents/children/siblings..) //
+let itemList = document.querySelector('#items'); // (the <ul></ul>)
+// // parentNode
 // console.log(itemList.parentNode);
 // itemList.parentNode.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentNode.parentNode.parentNode);
 
-// parentElement (for the most part same as parentNode)
+// // parentElement (for the most part same as parentNode)
 // console.log(itemList.parentElement);
 // itemList.parentElement.style.backgroundColor = '#f4f4f4';
 // console.log(itemList.parentElement.parentElement.parentElement);
 
 // // childNodes
-// console.log(itemList.childNodes); //try to avoid this because it consider all the white space and breaks between the nodes as well
+// console.log(itemList.childNodes); //try to avoid this because it consider also all the white space and breaks between the nodes
 // console.log(itemList.children); // (use this)
 // console.log(itemList.children[1]);
 // console.log((itemList.children[1].style.backgroundColor = 'yellow'));
@@ -108,7 +108,7 @@ let itemList = document.querySelector('#items');
 // console.log(itemList.firstChild); // avoid, it consider all the white space and breaks between the nodes as well
 // // firstElementChild
 // console.log(itemList.firstElementChild); // use this
-// itemList.firstElementChild.textContent = 'Hello 1';
+// itemList.firstElementChild.textContent = 'Hello 1456';
 
 // // lastChild
 // console.log(itemList.lastChild);
@@ -128,7 +128,7 @@ let itemList = document.querySelector('#items');
 // itemList.previousElementSibling.style.color = 'green';
 //
 
-// CREATE ELEMENT (createElement) //
+// // CREATE ELEMENT (createElement) //
 
 // // Create a div
 // let newDiv = document.createElement('div');
@@ -139,8 +139,8 @@ let itemList = document.querySelector('#items');
 // // Add attribute
 // newDiv.setAttribute('title', 'Hello Div');
 // // Create text node (text inside the div)
-// let newDivText = document.createTextNode('Hello World');
-// // Add text to div ( append the text to the div)
+// let newDivText = document.createTextNode('Hello Worlddd');
+// // Add text to div ( append the text to the div, to see it on the page)
 // newDiv.appendChild(newDivText);
 // // Insert the div into the DOM:
 // // grab the container class inside the header
@@ -150,10 +150,10 @@ let itemList = document.querySelector('#items');
 // // insert the div
 // container.insertBefore(newDiv, h1);
 // // styling the div
-// newDiv.style.fontSize = '30px';
+// newDiv.style.fontSize = '40px';
 
 // console.log(newDiv);
-//
+// //
 
 // // EVENT LISTENER //
 // let button = document
